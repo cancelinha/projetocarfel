@@ -17,16 +17,31 @@
 
 <body>
     <header>
-        <div id="modal" data-iziModal-fullscreen="true" data-iziModal-title="Login" data-iziModal-subtitle="Carfel"
-            data-iziModal-icon="icon-home">
-            <div class="md">
-                <input class="nm" type="text" placeholder="Nome">
-                <input class="pss" type="password" placeholder="Senha">
-                <div class="lgn">
-                        <a href=""><p>Entrar</p></a>
-                        <a href=""><p>Cancelar</p></a>
-            </div>
+        <div id="modal-Cadastrar" data-iziModal-fullscreen="true" data-iziModal-title="Cadastrar"
+            data-iziModal-subtitle="Carfel" data-iziModal-icon="icon-home">
+            <div class="campos">
+                    <div class="md">
+                        <input class="nm" type="text" placeholder="Nome">
+                        <input class="pss" type="password" placeholder="Senha">
+                    </div>
+                    <div class="lgn">
+                        <button><a href="">Entrar</a></button>
+                        <button ><a href="">Cancelar</a></button>
+                    </div>
+                </div>
+        </div>
 
+        <div id="modal-Login" data-iziModal-fullscreen="true" data-iziModal-title="Login" data-iziModal-subtitle="Carfel"
+            data-iziModal-icon="icon-home">
+            <div class="campos">
+                <div class="md">
+                    <input class="nm" type="text" placeholder="Nome">
+                    <input class="pss" type="password" placeholder="Senha">
+                </div>
+                <div class="lgn">
+                    <button><a href="">Entrar</a></button>
+                    <button ><a href="">Cancelar</a></button>
+                </div>
             </div>
         </div>
         <div class="banner">
@@ -68,13 +83,11 @@
             </div>
             <div class="bttn">
                 <div class="bt1">
-                    <a href="#" data-izimodal-open="#modal" data-izimodal-transitionin="fadeInDown">Login</a>
+                    <a href="#" data-izimodal-open="#modal-Login" data-izimodal-transitionin="fadeInDown">Login</a>
                     </a>
                 </div>
                 <div class="bt2">
-                    <a href="#">
-                        <p>Inscreva-se</p>
-                    </a>
+                    <a href="#" data-izimodal-open="#modal-Cadastrar" data-izimodal-transitionin="fadeInDown">Inscreva-se</a>
                 </div>
             </div>
         </div>
@@ -264,7 +277,8 @@
         });
     </script>
     <script>
-        $("#modal").iziModal();
+        $("#modal-Login").iziModal();
+        $("#modal-Cadastrar").iziModal();
     </script>
 
 </body>
